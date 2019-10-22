@@ -4,6 +4,7 @@
 
 > A VueCli3.x+TypeScript Toolkit for Web.
 
+<img alt="" src="https://raw.githubusercontent.com/aTong9/vue-phone-preview/master/src/assets/example.png" width="300">
 
 ## Install
 ```

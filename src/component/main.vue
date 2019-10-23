@@ -1,9 +1,27 @@
 <template>
   <div class="content">
-    <div class="close-open" :style="{background:bgcolor}" @click="isShow=!isShow">{{isShow?'关闭预览':'打开预览'}}</div>
+    <div
+      class="close-open"
+      :style="{background:bgcolor}"
+      @click="isShow=!isShow"
+    >{{isShow?'关闭预览':'打开预览'}}</div>
     <div :class="phoneClass" v-if="isShow">
       <div>
-        <div v-html="content" class="phone-con"></div>
+        <iframe
+          v-if="url"
+          :src="url"
+          width="314"
+          height="556"
+          marginwidth="0"
+          marginheight="0"
+          hspace="0"
+          vspace="0"
+          scrolling="auto"
+          allowtransparency="no"
+          frameborder="0"
+          style="background: #fff;padding-top:20px;"
+        ></iframe>
+        <div v-else v-html="content" class="phone-con"></div>
         <div class="content"></div>
         <div class="statusbar"></div>
         <div class="theme-switch">
@@ -33,10 +51,10 @@ import { Component, Vue, Watch, Prop } from 'vue-property-decorator'
 })
 export default class VuePhonePreview extends Vue {
   public static install () { Vue.component(VuePhonePreview.name, VuePhonePreview) }
-  protected phoneClass = 'phone'
-  protected num = 0
-  protected isShow = true
-  protected dataInfo: any = [
+  private phoneClass = 'phone'
+  private num = 0
+  private isShow = true
+  private dataInfo: any = [
     {
       url: require('../assets/logo-apple.png'),
       text: 'IOS'
@@ -50,8 +68,10 @@ export default class VuePhonePreview extends Vue {
   @Prop()
   private content!: string
   @Prop({ default: '' })
+  private url!: string
+  @Prop({ default: '' })
   private bgcolor!: string
-  protected change (item: any, index: number) {
+  private change (item: any, index: number) {
     this.num = index
     if (index === 0) {
       this.phoneClass = 'phone'

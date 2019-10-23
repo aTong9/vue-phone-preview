@@ -32,6 +32,17 @@ import VuePhonePreview from 'vue-phone-preview'
     VuePhonePreview
   }
 })
+
+/**
+ * 使用方法 
+ * ①、如果使用第一种方法，从其他微信编辑器（135或者word文档等等）
+ * 需要先把图片上传至第三方图片服务器，然后获取图片链接复制到文档里
+ * 例如：private content = '<img src="http://file.haoxinqing.cn/group1/M00/11/61/Chw4wFwAlz2AX_iqAABOSgaernE854.jpg" style=" max-width: 100%; height: auto;">'
+ * ②、就是iframe的形式，导入的是一个m端链接
+ */ 
+①、<vue-phone-preview :content="content"></vue-phone-preview>
+②、<vue-phone-preview :url="`https://mp.haoxinqing.cn`"></vue-phone-preview>
+
 ```
 
 ## LICENSE

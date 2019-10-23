@@ -6,7 +6,7 @@
 
 ## Demo pictures
 
-<div style="text-align: center; display: block;">
+<div style="text-align: center;">
   <img alt="" src="https://raw.githubusercontent.com/aTong9/vue-phone-preview/master/src/assets/example.png" width="300">
 </div>
 

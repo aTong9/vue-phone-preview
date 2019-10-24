@@ -3,8 +3,8 @@
     <div>
       <h1>测试 vuePhonePreview 组件</h1>
     </div>
-    <vue-phone-preview :content="content"></vue-phone-preview>
-    <!-- <vue-phone-preview :url="`https://mp.haoxinqing.cn`"></vue-phone-preview> -->
+    <!-- <vue-phone-preview :content="content"></vue-phone-preview> -->
+    <vue-phone-preview :url="`https://mp.haoxinqing.cn`"></vue-phone-preview>
   </div>
 </template>
 

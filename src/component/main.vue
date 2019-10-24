@@ -5,23 +5,19 @@
       :style="{background:bgcolor}"
       @click="isShow=!isShow"
     >{{isShow?'关闭预览':'打开预览'}}</div>
-    <div :class="phoneClass" v-if="isShow">
+    <div :class="phoneClass" v-show="isShow">
       <div>
         <iframe
-          v-if="url"
+          v-show="url"
           :src="url"
           width="314"
           height="556"
-          marginwidth="0"
-          marginheight="0"
-          hspace="0"
-          vspace="0"
           scrolling="auto"
           allowtransparency="no"
           frameborder="0"
           style="background: #fff;padding-top:20px;"
         ></iframe>
-        <div v-else v-html="content" class="phone-con"></div>
+        <div v-if="content" v-html="content" class="phone-con"></div>
         <div class="content"></div>
         <div class="statusbar"></div>
         <div class="theme-switch">

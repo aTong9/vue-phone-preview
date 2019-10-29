@@ -1,6 +1,6 @@
 {
   "name": "vue-phone-preview",
-  "version": "0.4.12",
+  "version": "0.4.13",
   "private": false,
   "description": "pc端手机预览组件",
   "main": "dist/VuePhonePreview.common.js",

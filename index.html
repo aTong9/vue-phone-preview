@@ -29,7 +29,7 @@
               scrolling="auto"
               allowtransparency="no"
               frameborder="0"
-              style="background: #fff;padding-top:20px;"
+              style="background: #fff;"
             ></iframe>
             <div v-if="content" v-html="content" class="phone-con"></div>
             <div class="content"></div>
@@ -143,6 +143,9 @@
         width: calc(320px - 40px);
         margin: 6px;
       }
+      .phone > iframe {
+          padding-top: 20px;
+      }
       .phone > .statusbar {
         position: absolute;
         width: 320px;
@@ -221,6 +224,9 @@
         padding: 60px 20px;
         height: 600px;
         margin-top: 9px;
+      }
+      .android > iframe {
+          padding-top: 27px;
       }
       .android > .phone-con {
         height: 520px;

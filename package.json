@@ -1,6 +1,6 @@
 {
   "name": "vue-phone-preview",
-  "version": "0.4.13",
+  "version": "0.4.17",
   "private": false,
   "description": "pc端手机预览组件",
   "main": "dist/VuePhonePreview.common.js",
@@ -8,15 +8,18 @@
   "author": "YuBin <473811660@qq.com>",
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name VuePhonePreview ./src/index.ts",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "v": "node build/update-version.js",
+    "publish": "npm run build-bundle && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aTong9/vue-phone-preview"
   },
+  "bugs": {
+    "url": "https://github.com/aTong9/vue-phone-preview/issues"
+  },
+  "homepage": "https://github.com/aTong9/vue-phone-preview",
   "keywords": [
     "vue",
     "vuejs",

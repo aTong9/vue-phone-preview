@@ -15,7 +15,7 @@
           scrolling="auto"
           allowtransparency="no"
           frameborder="0"
-          style="background: #fff;padding-top:20px;"
+          style="background: #fff;"
         ></iframe>
         <div v-if="content" v-html="content" class="phone-con"></div>
         <div class="content"></div>
@@ -108,6 +108,9 @@ export default class VuePhonePreview extends Vue {
   padding: 80px 25px;
   text-align: justify;
   z-index: 9999;
+   iframe {
+    padding-top: 20px;
+  }
   .phone-con {
     overflow: hidden;
     height: 568px;
@@ -202,6 +205,9 @@ header .phone:before {
   padding: 60px 20px;
   height: 600px;
   margin-top: 9px;
+  iframe {
+    padding-top: 27px;
+  }
   .phone-con {
     height: 520px;
     img {

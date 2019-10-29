@@ -3,10 +3,6 @@ const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
-  // lintOnSave: false,
-  // runtimeCompiler: true,
-  // publicPath: './',
-  // outputDir: 'dist', // 输出文件目录
   pages: {
     index: {
       entry: 'examples/main.ts',
